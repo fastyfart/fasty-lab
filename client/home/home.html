@@ -1,0 +1,48 @@
+<template name="home" >
+
+	{{#if isFull}}
+		{{>fullPost}}
+	{{else}}
+		{{>postNail}}
+	{{/if}}
+
+</template>
+
+<template name="postNail" >
+	{{#each postNail}}
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="preview-post">
+					<div class="preview-title">
+						<a href="/blog/{{_id}}">{{{title}}}</a>
+						<div class="clearfix"></div>
+						<span class="pull-right" id="readmore">
+							<button class="btn btn-default" id="fullPost">Readmore</button>
+						</span>
+					</div>
+					<div class="preview-content">
+						{{#each imageName}}						
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+								<a href="#" class="thumbnail" >
+									<img src="{{this.url}}">
+								</a>
+							</div>
+						{{/each}}
+						{{{cut content}}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="separator">
+	{{/each}}
+</template>
+
+<template name="fullPost">
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		{{post.title}}
+
+		{{{post.content}}}
+	</div>
+</div>
+</template>

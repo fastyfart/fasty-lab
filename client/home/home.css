@@ -1,0 +1,48 @@
+.preview-post{
+	min-height       : 240px;
+	height           : 240px;
+	margin-bottom    : 20px;
+	position: relative;
+}
+
+.preview-post .preview-title{
+	background-color: transparent;
+	padding: 10px 5px;
+	font-size: 30px;
+	color: #00ba88;
+	margin-left: 0px;
+}
+
+.preview-post .preview-content{
+	background-color : transparent;
+	padding          : 15px 5px;
+	min-height       : 140px;
+}
+
+.preview-post .preview-content .preview-info{
+	background-color : transparent;
+	padding          : 15px 5px;
+	min-height       : 40px;
+}
+
+.preview-post .preview-content .thumbnail{
+	background-color : transparent;
+	border: 0px;
+	margin-top: -15px;
+	margin-bottom: -15px;
+	padding: 0px;
+}
+
+.preview-content .thumbnail img{
+	height:140px;
+}
+
+.separator{
+	height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+#readmore{
+	font-size: 14px;
+}

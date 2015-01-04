@@ -7,3 +7,13 @@
 meteor-platform
 accounts-password
 accounts-base
+iron:router
+mizzao:bootstrap-3
+zimme:iron-router-active
+summernote:standalone
+sacha:spin
+ajduke:bootstrap-tagsinput
+chrismbeckett:toastr
+practicalmeteor:underscore.string
+cfs:standard-packages
+cfs:filesystem

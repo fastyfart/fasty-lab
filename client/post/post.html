@@ -1,0 +1,29 @@
+<template name="post">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+			  	<h1>New Post <small>as yourself </small>
+			  		<button class="btn btn-primary" id="save">Save</button>
+		  		</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<input type="text" id="title" class="form-control" placeholder="Title Post">
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<input type="text" id="tag" class="form-control" placeholder="Tag post" data-role="tagsinput">
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<input type="file" name="image" id="image" class="form-control" placeholder="Image post" multiple>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div id="summernote">
+				
+			</div>
+		</div>
+	</div>
+</template>
