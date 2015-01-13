@@ -1,13 +1,19 @@
+Session.setDefault('isView', 'posting');
+
 Template.post.rendered = function () {
 	$('#summernote').summernote({
 		height : 300
 	});
 	$('#tag').tagsinput();
-	console.log(Images.find({ '_id' : "yLTqw6Sc9HNFRCaBo" }));
 };
 
 Template.post.events({
-	'click #save' : function(e,t){
+	'click #savedPosts' : function(e,t){
+		Session.set('isView', 'savedPosts');
+		console.log(Session.get('isView'));
+	},
+	'click .submit' : function(e,t){
+		var status = e.currentTarget.id;
 		var title = t.find('#title').value;
 		var content = $('#summernote').code();
 		var tag = $('#tag').tagsinput('items');	
@@ -28,10 +34,11 @@ Template.post.events({
 							title : title,
 							content : content,
 							tag : tag,
-							img : img
+							img : img,
+							status : status
 						};
 
-						Meteor.call('savePost', post, function(err){
+						Meteor.call('submitPost', post, function(err){
 							if(err){
 								toastr.error('Error');
 							}else{
@@ -48,6 +55,14 @@ Template.post.events({
 Template.post.helpers({
 	content: function () {
 		return Session.get('content');
+	},
+	isView : function(val){
+		v = Session.get('isView');
+		if(v === val){
+			return true;
+		}else{
+			return false;
+		}
 	}
 });
 

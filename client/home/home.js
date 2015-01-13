@@ -8,8 +8,7 @@ Template.home.helpers({
 
 Template.postNail.helpers({
 	postNail: function () {
-		//return Post.find({}, {sort : {created : -1}});
-		var post = Post.find({}, {sort : {created : -1}}).fetch();
+		var post = Post.find({status : 'publish' }, {sort : {created : -1}}).fetch();
 		post.forEach(function(val, i){
 			var arr = val.img;
 			if(val.img){

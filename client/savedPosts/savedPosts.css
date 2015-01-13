@@ -1,0 +1,12 @@
+.savedsList li{
+	list-style: none;
+	cursor: pointer;
+	padding: 5px;
+	margin-left: 3px;
+}
+
+.savedsList li:hover{
+	color: lightgrey;
+	box-shadow: -1px 0px 0 #c4c4c4;
+	margin-left: 3px;
+}
